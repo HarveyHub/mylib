@@ -1,10 +1,10 @@
 #! /usr/bin/python
 #coding:utf-8
-import subprocess
+import subprocess as sp
 timers = [];
 cnt = 20;
 for i in range(cnt):
-    p = subprocess.Popen("./target", stdout=subprocess.PIPE);
+    p = sp.Popen(["./target", "-a -b b"], shell=True, stdout=sp.PIPE);
     output = p.stdout.read().split();
     #print output;
     tmp = [];
