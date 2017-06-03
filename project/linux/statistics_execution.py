@@ -4,7 +4,7 @@ import subprocess as sp
 timers = [];
 cnt = 20;
 for i in range(cnt):
-    p = sp.Popen(["./target", "-a -b b"], shell=True, stdout=sp.PIPE);
+    p = sp.Popen(["target", "-a"], shell=True, stdout=sp.PIPE);
     output = p.stdout.read().split();
     #print output;
     tmp = [];
