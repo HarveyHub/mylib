@@ -67,8 +67,12 @@ int main(int argc, char** argv)
     MSG("dp");
     unsigned coins[3] = {1, 2, 5};
     unsigned total = 17;
-    for(unsigned i = 0; i < total; i++)
-	    MSG(i << " needs " << min_cnt_coin(coins, 3, i) << " coins");
+    min_cnt_coin(coins, 3, total);
+    //for(unsigned i = 0; i < total; i++)
+	//   MSG(i << " needs " << min_cnt_coin(coins, 3, i) << " coins");
+	
+	int sequence[] = {5, 3, 4, 8, 6, 7};
+	MSG("the longest increasing sequence length is " << lis(sequence, 6));
 	return 0;
 
 }
