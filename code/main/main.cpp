@@ -2,6 +2,7 @@
 #include <unistd.h>
 #include <stdio.h>
 #include "comm.h"
+#include "myalgorithms.h"
 
 using namespace std;
 
@@ -62,6 +63,12 @@ int main(int argc, char** argv)
 	end = getCurrentTimeStamp();
 	MSG("cost " << (end -start) << "us" );
     MSG("Program ends");
+
+    MSG("dp");
+    unsigned coins[3] = {1, 2, 5};
+    unsigned total = 17;
+    for(unsigned i = 0; i < total; i++)
+	    MSG(i << " needs " << min_cnt_coin(coins, 3, i) << " coins");
 	return 0;
 
 }
