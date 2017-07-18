@@ -65,8 +65,8 @@ int main(int argc, char** argv)
     MSG("Program ends");
 
     MSG("dp");
-    unsigned coins[3] = {1, 2, 5};
-    unsigned total = 17;
+    unsigned int coins[3] = {1, 2, 5};
+    unsigned int total = 17;
     min_cnt_coin(coins, 3, total);
     //for(unsigned i = 0; i < total; i++)
 	//   MSG(i << " needs " << min_cnt_coin(coins, 3, i) << " coins");
